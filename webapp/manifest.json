@@ -1,0 +1,194 @@
+{
+    "_version": "1.40.0",
+    "sap.app": {
+        "id": "app.first.sapui5project1",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{ appTitle }}",
+        "description": "{{ appDescription }}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap-ux/fiori-freestyle-writer:basic",
+            "version": "0.11.15",
+            "toolsId": "c9378f4d-aae5-4abf-8157-366b98a4178b"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.102.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "app.first.sapui5project1.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {}
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "app.first.sapui5project1.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "Routemainview",
+                    "pattern": "1:?query:",
+                    "target": ["Targetmainview"]
+                },
+                {
+                    "name": "RouteTilesview",
+                    "pattern": "",
+                    "target": ["TargetTilesview"]
+                },
+                {
+                    "name": "First",
+                    "pattern": "First",
+                    "target": ["TargetCountview"]
+                },
+                {
+                    "name": "Second",
+                    "pattern": "Second",
+                    "target": ["TargetCovidview"]
+                }, {
+                    "name": "second-list",
+                    "pattern": "second-list",
+                    "target": ["Targetseclist"]
+                }, {
+                    "name": "second-pie",
+                    "pattern": "second-pie",
+                    "target": ["Targetsecpie"]
+                }, {
+                    "name": "Third",
+                    "pattern": "Third",
+                    "target": ["Targetvacc"]
+                }
+            ],
+            "targets": {
+                "Targetmainview": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "mainview",
+                    "viewName": "mainview"
+                },
+                "TargetTilesview": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Tiles",
+                    "viewName": "Tiles",
+                    "controlId": "app"
+                },
+                "TargetCountview": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "CountDown.CountDown",
+                    "viewName": "CountDown.CountDown",
+                    "controlId": "app"
+                },
+                "TargetCovidview": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "covid.Covid",
+                    "viewName": "covid.Covid",
+                    "controlId": "app"
+                },
+                "Targetseclist": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "covid.List",
+                    "viewName": "covid.List",
+                    "controlId": "app"
+                },
+                "Targetsecpie": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "covid.Pie",
+                    "viewName": "covid.Pie",
+                    "controlId": "app"
+                },
+                "Targetvacc": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "vacc.Vacc",
+                    "viewName": "vacc.Vacc",
+                    "controlId": "app"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "app.first.sapui5project1.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}

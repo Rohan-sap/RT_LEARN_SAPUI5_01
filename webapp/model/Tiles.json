@@ -1,0 +1,20 @@
+[
+    {
+        "Title": "Countdown Project",
+        "Route": "First",
+        "Image": "sap-icon://home-share"
+    }, {
+        "Title": "Covid Monitor",
+        "Route": "Second",
+        "Image": "sap-icon://home-share"
+    }, {
+        "Title": "Vaccination tracker",
+        "Route": "Third",
+        "Image": "sap-icon://home-share"
+    }, {
+        "Title": "Pollution Tracker",
+        "Route": "EXT-Forth",
+        "Image": "sap-icon://home-share",
+        "url": "https://port8080-workspaces-ws-lswgn.us10.trial.applicationstudio.cloud.sap/test/flpSandbox.html?sap-ui-xx-viewCache=false#sapprj2sapui5project2-display"
+    }
+]

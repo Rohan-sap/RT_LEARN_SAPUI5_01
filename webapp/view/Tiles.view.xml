@@ -1,0 +1,19 @@
+<mvc:View controllerName="app.first.sapui5project1.controller.Tiles"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="Tiles" title="{i18n>title}" >
+        <content>
+        	<l:VerticalLayout class="sapUiContentPadding">
+            	<l:HorizontalLayout class="sapUiContentPadding" allowWrapping = "true" content="{Tiles>/}" >
+        	        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{Tiles>Title}"  press="onPress(${Tiles>Route})"
+		              frameType = "OneByOne"  >
+                        <TileContent>
+                            <ImageContent src="{Tiles>Image}" />
+                        </TileContent>                      
+	                </GenericTile>               
+    	      </l:HorizontalLayout>
+    	    </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View>
